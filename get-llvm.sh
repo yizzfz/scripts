@@ -13,3 +13,8 @@ tar -xf compiler-rt-4.0.0.src.tar.xz && mv compiler-rt-4.0.0.src compiler-rt
 wget http://releases.llvm.org/4.0.0/openmp-4.0.0.src.tar.xz
 tar -xf openmp-4.0.0.src.tar.xz && mv openmp-4.0.0.src openmp
 cd ..
+
+cd ..
+mkdir llvm-4.0.0.build
+cd llvm-4.0.0.build
+cmake ../llvm-4.0.0.src -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_RTTI=True
